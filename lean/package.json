@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "flowbite": "^2.1.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
+  }
+}
