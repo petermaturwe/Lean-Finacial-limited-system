@@ -536,3 +536,6 @@ video {
 
 /* Your custom styles or Tailwind utility classes here */
 
+.header2{
+  color: blue;
+}

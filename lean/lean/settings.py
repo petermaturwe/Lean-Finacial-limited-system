@@ -56,10 +56,13 @@ ROOT_URLCONF = 'lean.urls'
 COMPRESS_ROOT = BASE_DIR / 'financial/static'
 COMPRESS_ENABLED =True
 
-COMPRESS_URL = '/static/'
+COMPRESS_URL = '/financial/static/'
 
 STATICFILES_FINDERS =('compressor.finders.CompressorFinder',)
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_URL = '/financial/static/'
 
 TEMPLATES = [
     {
@@ -122,10 +125,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
