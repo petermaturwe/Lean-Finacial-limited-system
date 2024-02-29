@@ -1,2 +1,4 @@
 django-compressor 
 django
+django-mpesa
+djangorestframework
