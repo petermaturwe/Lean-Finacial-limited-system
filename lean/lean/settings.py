@@ -117,7 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # B2B settings configuration
 MPESA_BEARER_TOKEN = os.environ.get('MPESA_BEARER_TOKEN')
-
+MPESA_API_URL = 'https://sandbox.safaricom.co.ke/mpesa/b2b/v1/paymentrequest'
+MPESA_BEARER_TOKEN = 'WWT6AF8cVqtBB18PayPPZ7b8IRSl'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
