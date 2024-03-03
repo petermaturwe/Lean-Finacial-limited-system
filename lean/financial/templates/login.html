@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="login-container">
+    <img class="lean-logo" src={% static 'images/leanfinanciallimited.png' %}>
     <h2>Login</h2>
     <form class="login-form" method="post" action="{% url 'login' %}">
       {% csrf_token %}

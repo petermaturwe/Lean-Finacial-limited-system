@@ -5,7 +5,7 @@ from .views import B2BPaymentAPIView
 from django.conf.urls.static import static 
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.login, name='login'),
     path('api/b2b/payment/', B2BPaymentAPIView.as_view(), name='b2b_payment'),
 
 ]

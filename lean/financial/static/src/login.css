@@ -8,6 +8,14 @@ body {
     align-items: center;
     height: 100vh;
   }
+  .lean-logo{
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+
+  }
   .login-container {
     background: #fff;
     padding: 20px;
@@ -30,6 +38,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+
   }
   .login-form .btn {
     padding: 10px;
@@ -38,6 +47,7 @@ body {
     background-color: #30aabc;
     color: white;
     cursor: pointer;
+    height: 40px;
   }
   .login-form .btn:hover {
     background-color: #278a98;

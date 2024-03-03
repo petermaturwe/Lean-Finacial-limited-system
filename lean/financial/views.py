@@ -8,8 +8,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+def login(request):
+    return render(request, 'login.html')
 
 @method_decorator(csrf_exempt, name='dispatch')
 class B2BPaymentAPIView(APIView):
