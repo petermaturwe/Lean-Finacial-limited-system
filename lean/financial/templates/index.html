@@ -28,11 +28,12 @@
     </nav>
 
     <div class="search">
-        <input type="text" placeholder="Search users">
+        <input type="text" placeholder=" Search users">
     </div>
 
-    <section class="transactions">
+    <section class="cb-transactions">
         <h2>Recent Transaction:</h2>
+        <p class="cl-head">CLIENTS to LEAN</p>
         <table>
             <thead>
                 <tr>
@@ -52,12 +53,61 @@
                     <td>12 Sep 2023</td>
                     <td>100,000</td>
                     <td>320567</td>
-                    <td><button>Edit</button></td>
+                    <td><button class="view-btn"><i class="fas fa-eye" style="cursor:pointer;"></i></button></td>
+                </tr>
+
+                <tr>
+                    <td>JOHN DOE</td>
+                    <td>+2547xxxxxxx</td>
+                    <td>12 Sep 2023</td>
+                    <td>100,000</td>
+                    <td>320567</td>
+                    <td><button class="view-btn"><i class="fas fa-eye" style="cursor:pointer;"></i></button></td>
                 </tr>
                 <!-- ... -->
             </tbody>
         </table>
     </section>
+
+
+
+    <section class="bc-transactions">
+
+        <p class="cl-head">LEAN to CLIENTS</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Acc Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repeat this row for each transaction -->
+                <tr>
+                    <td>JOHN DOE</td>
+                    <td>+2547xxxxxxx</td>
+                    <td>12 Sep 2023</td>
+                    <td>100,000</td>
+                    <td>320567</td>
+                    <td><button class="view-btn"><i class="fas fa-eye" style="cursor:pointer;"></i></button></td>
+                </tr>
+
+                <td>JOHN DOE</td>
+                <td>+2547xxxxxxx</td>
+                <td>12 Sep 2023</td>
+                <td>100,000</td>
+                <td>320567</td>
+                <td><button class="view-btn"><i class="fas fa-eye" style="cursor:pointer;"></i></button></td>
+            </tr>
+                <!-- ... -->
+            </tbody>
+        </table>
+    </section>
+
 
     <!-- Repeat the section above for different transaction categories -->
 
