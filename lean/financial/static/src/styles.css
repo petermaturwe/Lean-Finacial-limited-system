@@ -39,7 +39,17 @@ nav.actions button {
     border: none;
     border-radius: 20px;
 }
+.calculator{
+    background-color:#FF6534;
+    color:white;
+    padding: 15px;
+    border-radius: 10px;
+    border:1 px solid white;
+    margin-left: 25px;
+    margin-top:20px;
+    cursor:pointer;
 
+}
 .search input[type="text"] {
     padding: 10px;
     margin: 20px;
@@ -92,7 +102,7 @@ td button {
 }
 .view-btn:hover{
     color: #30aabc;
-    
+
 }
 /* Responsive styles */
 @media (max-width: 768px) {

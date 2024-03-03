@@ -18,6 +18,13 @@ def index(request):
 def asset(request):
     return render(request, 'assetmanagement.html')
 
+def client(request):
+    return render(request, 'client-detail.html')
+
+def adddebtor(request):
+    return render(request, 'add-client.html')
+
+
 @method_decorator(csrf_exempt, name='dispatch')
 class B2BPaymentAPIView(APIView):
     def post(self, request, *args, **kwargs):

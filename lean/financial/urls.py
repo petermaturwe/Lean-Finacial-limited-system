@@ -8,6 +8,8 @@ urlpatterns = [
     path('', views.login, name='login'),
     path('index/', views.index, name='index'),
     path('asset/', views.asset, name='asset'),
+    path('client/', views.client, name='client'),
+    path('adddebtor/', views.adddebtor, name='adddebtor'),
     path('api/b2b/payment/', B2BPaymentAPIView.as_view(), name='b2b_payment'),
 
 ]
