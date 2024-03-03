@@ -31,24 +31,25 @@ header {
 /* Summary Cards */
 .summary {
     display: flex;
-    
-    justify-content: space-around;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border:1px solid #30aabc;
+    width:500px;
+    border-radius: 5px;
+    margin-left:40px;
+    padding: 10px; /* Adjust padding as needed */
+}
+.summary-card {
+/* Adjust the color as needed */
+
+    margin-bottom: 20px; /* Space between cards */
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+    align-items: flex-start;
 }
 
-.summary-card {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    height: 200px;
-    border:1px solid #30aabc;
-}
-.summary-card p{
-    margin-top:50px;
-    font-weight: bold;
-}
+
 .loan-number{
 
     color:white;
@@ -66,10 +67,12 @@ header {
 .summary-card2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Adjust this to center or flex-end based on your design */
+    align-items: flex-start;
+    margin-bottom: 20px;  /* Adjust this to center or flex-end based on your design */
 }
 
 .status-list {
+    margin-top:15px;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* This spreads the status items in a row */
@@ -102,7 +105,7 @@ header {
 }
 
 .status-number {
-    font-weight: bold; /* Makes the number and status bold */
+    font-weight: 500; /* Makes the number and status bold */
 }
 
 .loan-type{
