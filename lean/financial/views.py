@@ -24,6 +24,8 @@ def client(request):
 def adddebtor(request):
     return render(request, 'add-client.html')
 
+def stk(request):
+    return render(request, 'mpesa-payment.html')
 
 @method_decorator(csrf_exempt, name='dispatch')
 class B2BPaymentAPIView(APIView):

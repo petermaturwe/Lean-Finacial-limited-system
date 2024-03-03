@@ -9,6 +9,7 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('asset/', views.asset, name='asset'),
     path('client/', views.client, name='client'),
+    path('stk/', views.stk, name='stk'),
     path('adddebtor/', views.adddebtor, name='adddebtor'),
     path('api/b2b/payment/', B2BPaymentAPIView.as_view(), name='b2b_payment'),
 

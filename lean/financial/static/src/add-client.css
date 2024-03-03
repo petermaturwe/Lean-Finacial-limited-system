@@ -68,12 +68,12 @@ input, select {
 }
 
 .calculator-button {
-    background-color: #3498db;
+    background-color: #FF6534;
     margin-bottom: 10px;
 }
 
 .submit-button {
-    background-color: #2ecc71;
+    background-color: #30aabc;
 }
 
 /* Responsive Styles */
