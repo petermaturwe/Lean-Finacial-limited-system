@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Details</title>
+    <link rel="stylesheet" href="{% static 'src/clien-detail.css'%}">
+</head>
+<body>
+
+<section class="client-details-container">
+
+    <div class="client-details">
+        <div class="client-info">
+            <div class="client-name">
+                <span class="status-dot active"></span>
+                <h2>John Doe</h2>
+            </div>
+            <p>Loan Type: <span>Log book</span></p>
+            <p>Amount Disbursed: <span>100,000</span></p>
+            <p>Date Disbursed: <span>10/11/2023</span></p>
+            <p>Loan Status: <span class="loan-status active">Active</span></p>
+            <p>Amount Paid: <span>40,000</span></p>
+            <p>Balance: <span>80,000</span></p>
+        </div>
+        <div class="client-meta">
+            <p>Phone: <span>+25470000000</span></p>
+            <p>ID: <span>3934564</span></p>
+            <p>Penalties: <span>0</span></p>
+            <p>Payment Deadline: <span>10/12/2023</span></p>
+            <!-- Add other details as necessary -->
+        </div>
+        <div class="client-actions">
+            <!-- Add action buttons here -->
+        </div>
+    </div>
+
+    <div class="transactions">
+        <h3>John Doe Transactions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction Type</th>
+                    <th>Account Number</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B2C</td>
+                    <td>320567</td>
+                    <td>12 Sep 2023 9:05 AM</td>
+                    <td>-100,000</td>
+                </tr>
+                <tr>
+                    <td>C2B</td>
+                    <td>320567</td>
+                    <td>12 Sep 2023 9:05 AM</td>
+                    <td>100,000</td>
+                </tr>
+                <!-- Add more rows as necessary -->
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+</body>
+</html>
