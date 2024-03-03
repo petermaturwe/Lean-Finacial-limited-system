@@ -11,6 +11,9 @@ from django.utils.decorators import method_decorator
 def login(request):
     return render(request, 'login.html')
 
+def index(request):
+    return render(request, 'index.html')
+
 @method_decorator(csrf_exempt, name='dispatch')
 class B2BPaymentAPIView(APIView):
     def post(self, request, *args, **kwargs):
