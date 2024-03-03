@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.login, name='login'),
     path('index/', views.index, name='index'),
+    path('asset/', views.asset, name='asset'),
     path('api/b2b/payment/', B2BPaymentAPIView.as_view(), name='b2b_payment'),
 
 ]

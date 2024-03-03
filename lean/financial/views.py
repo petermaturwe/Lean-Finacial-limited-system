@@ -14,6 +14,10 @@ def login(request):
 def index(request):
     return render(request, 'index.html')
 
+
+def asset(request):
+    return render(request, 'assetmanagement.html')
+
 @method_decorator(csrf_exempt, name='dispatch')
 class B2BPaymentAPIView(APIView):
     def post(self, request, *args, **kwargs):

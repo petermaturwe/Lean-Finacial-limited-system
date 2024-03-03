@@ -1,0 +1,216 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.lean-logo{
+    height: 50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+/* Summary Cards */
+.summary {
+    display: flex;
+    
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    height: 200px;
+    border:1px solid #30aabc;
+}
+.summary-card p{
+    margin-top:50px;
+    font-weight: bold;
+}
+.loan-number{
+
+    color:white;
+  
+    border-radius:30px;
+ 
+}
+.summary-card h3 {
+    color: #333;
+    margin-top: 10px;
+   
+}
+
+
+.summary-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adjust this to center or flex-end based on your design */
+}
+
+.status-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* This spreads the status items in a row */
+    gap: 10px; /* Adjust the gap between items */
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px; /* Adjust the space between the dot and the text */
+}
+
+.active {
+    background-color: green;
+}
+
+.settled {
+    background-color: blue;
+}
+
+.delayed {
+    background-color: red;
+}
+
+.status-number {
+    font-weight: bold; /* Makes the number and status bold */
+}
+
+.loan-type{
+    margin-top:40px;
+    margin-left: 40px;
+    color:#30aabc;
+
+}
+
+
+.summary-card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.amounts {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between items */
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-weight: bold;
+    margin: 0; /* Removes default margin from h3 */
+}
+
+.total {
+    color: #000000; /* Black for total amount */
+}
+
+.paid {
+    color: #28A745; /* Green for paid amount */
+}
+
+.not-paid {
+    color: #DC3545; /* Red for not paid amount */
+}
+
+
+/* Transactions Section */
+.transactions {
+    margin: 20px;
+}
+
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.transactions-header input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+.status-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .summary {
+        flex-direction: column;
+    }
+
+    .summary-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .transactions-header {
+        flex-direction: column;
+    }
+
+    .transactions-header input {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-info {
+        display: none; /* Hide user info on very small screens */
+    }
+}

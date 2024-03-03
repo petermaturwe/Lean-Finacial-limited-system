@@ -41,6 +41,8 @@ body {
 
   }
   .login-form .btn {
+    width:380px ;
+
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -48,6 +50,11 @@ body {
     color: white;
     cursor: pointer;
     height: 40px;
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
   }
   .login-form .btn:hover {
     background-color: #278a98;
