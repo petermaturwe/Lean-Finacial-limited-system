@@ -58,13 +58,14 @@ ROOT_URLCONF = 'lean.urls'
 COMPRESS_ROOT = BASE_DIR / 'financial/static'
 COMPRESS_ENABLED =True
 
-COMPRESS_URL = '/financial/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT ='/static/'
 
-STATICFILES_FINDERS =('compressor.finders.CompressorFinder',)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 TEMPLATES = [
     {
