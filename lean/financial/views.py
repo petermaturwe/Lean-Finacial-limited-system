@@ -1,3 +1,5 @@
+import os
+import uuid
 from django.shortcuts import render
 from rest_framework import status
 from .utils import MpesaGateWay
@@ -7,7 +9,8 @@ import requests
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-
+import logging 
+logger = logging.getLogger(__name__)
 # Create your views here.
 def login(request):
     return render(request, 'login.html')
@@ -35,9 +38,9 @@ class PaymentAPIView(APIView):
     def post(self, request, *args, **kwargs):
         phone_number = request.data.get('phone_number')
         amount = request.data.get('amount', 0)
-        account_reference = 'DxChange'
+        account_reference = 'Lean'
         transaction_desc = 'Payment of X'
-        callback_url = os.environ.get('MPESA_CALLBACK_URL', 'https://mydomain.com/pat')
+        callback_url = os.environ.get('MPESA_CALLBACK_URL', 'https://mydomain.com/path')
         
        
 

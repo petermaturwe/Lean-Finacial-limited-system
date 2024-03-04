@@ -55,6 +55,7 @@ class MpesaGateWay:
         self.consumer_key = settings.MPESA_CONSUMER_KEY
         self.consumer_secret = settings.MPESA_CONSUMER_SECRET
         self.access_token_url = settings.ACCESS_TOKEN_URL
+        self.headers = None
     
         self.password = self.generate_password()
         self.checkout_url = settings.CHECKOUT_URL
@@ -70,17 +71,19 @@ class MpesaGateWay:
         else:
             self.access_token_expiration = time.time() + 3400
 
-    def getAccessToken(self):
+    def get_access_token(self):
         try:
-            res = requests.get(self.access_token_url, auth=HTTPBasicAuth(self.consumer_key, self.consumer_secret))
-            print(res)
-        except Exception as err:
-            logging.error("Error {}".format(err))
-            #raise err
-        else:
-            token = res.json()["access_token"]
-            self.headers = {"Authorization": "Bearer %s" % token}
-            return token
+            response = requests.get(self.access_token_url, auth=HTTPBasicAuth(self.consumer_key, self.consumer_secret))
+            response.raise_for_status()  # This will raise an exception for HTTP error codes
+            self.access_token = response.json().get('access_token')
+            if self.access_token:
+                self.headers = {"Authorization": f"Bearer {self.access_token}"}
+            else:
+                raise Exception("Failed to get access token")
+        except Exception as e:
+            print(f"An error occurred while getting access token: {e}")
+            raise
+
 
     class Decorators:
         @staticmethod
@@ -102,7 +105,11 @@ class MpesaGateWay:
         return base64.b64encode(password_bytes).decode("utf-8")
 
     @Decorators.refreshToken
+
     def stk_push(self, phone_number, amount, callback_url, account_reference, transaction_desc):
+        if not self.headers:  # Ensure that the headers are set
+            self.get_access_token()
+
         if str(account_reference).strip() == '':
             raise MpesaInvalidParameterException('Account reference cannot be blank')
         if str(transaction_desc).strip() == '':

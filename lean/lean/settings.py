@@ -114,9 +114,19 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+#STK push token
+MPESA_ENVIRONMENT = 'sandbox'
 
+# Credentials for the daraja app
 
+MPESA_CONSUMER_KEY = 'HKZ3EAFa6MkAN7VUjWIxWq82VerArOAK1qr6MX4ZyD1ZAzV3'
+MPESA_CONSUMER_SECRET = 'aUVKoJ6OnQOvfEQoggKehGBJyEgYHiNqNmxWrwW46AxhReZYDJRmZuIo7rZjFOhD'
+ACCESS_TOKEN_URL ='https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
+BUSINESS_SHORTCODE = '174379'
+PASS_KEY ='bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
+CHECKOUT_URL = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'
 # B2B settings configuration
+MPESA_SHORTCODE = 174379
 MPESA_BEARER_TOKEN = os.environ.get('MPESA_BEARER_TOKEN')
 MPESA_API_URL = 'https://sandbox.safaricom.co.ke/mpesa/b2b/v1/paymentrequest'
 MPESA_BEARER_TOKEN = 'WWT6AF8cVqtBB18PayPPZ7b8IRSl'
