@@ -10,6 +10,7 @@
 
 
     <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'src/calculator.css' %}">
 </head>
 <body>
     <header>
@@ -27,9 +28,65 @@
         <button class="debtor-class" style="background-color: #4ECB71; padding: 30px; border-radius: 100%; border: 1px solid #30aabc; height: 150px; width: 150px; cursor:pointer; "><i class="fas fa-bowling-ball" style="color: white; "></i> <br /><br /><p style="color:white;">Special Loans</p></button>
         <a href="{% url 'stk'%}"><button class="debtor-class" style="background-color: white; padding: 30px; border-radius: 100%; border: 1px solid green; height: 150px; width: 150px; cursor:pointer; "><img src="{% static 'images/mpesa.png'%}" style="height:40px; width:70px;"> <br /><br />Use Mpesa STK Push  </button></a>
     </nav>
+
     <div>
-        <button class="calculator">CALCULATOR</button>
+        <button class="calculator" id="calculator-button" >CALCULATOR</button>
     </div>
+
+    <!-- Calculator Popup -->
+<div id="calculator-popup" class="calculator-popup" style="display: none;">
+    <div class="calculator-content">
+        <span class="close-button">&times;</span>
+        <form id="loan-form">
+            <div class="form-group">
+                <label for="loan-amount">Loan Amount (Ksh)</label>
+                <div class="currency-input">
+                    <span class="currency">Ksh</span>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="loan-term-years">Loan Term</label>
+                <input type="number" id="loan-term-years" name="loan-term-years" placeholder="Years" required>
+                <input type="number" id="loan-term-months" name="loan-term-months" placeholder="Months" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%)</label>
+                <input type="number" id="interest-rate" name="interest-rate" required>
+            </div>
+            <div class="form-group">
+                <label for="compound">Compound</label>
+                <select id="compound" name="compound" required>
+                    <option value="annually">Annually</option>
+                    <option value="semi-annually">Semi-annually</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="semi-monthly">Semi-monthly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payback">Payback</label>
+                <select id="payback" name="payback" required>
+                    <option value="half-a-month">Half a month</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="semi-annually">Semi-annually</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="calculate-button" class="calculate-button">Calculate</button>
+                <button type="reset" id="clear-button" class="clear-button">Clear</button>
+            </div>
+        </form>
+        <div id="results" style="display: none;">
+            <p>Payment (with the timeline): <span id="payment-timeline">N/A</span></p>
+            <p>Payment Monthly: Ksh <span id="payment-monthly">0</span></p>
+            <p>Total Number of Payments: <span id="total-payments">0</span></p>
+            <p>Total Interest: Ksh <span id="total-interest">0</span></p>
+            <!-- Pie chart would go here -->
+        </div>
+    </div>
+</div>
 
     <div class="search">
         <input type="text" placeholder=" Search users">
@@ -111,9 +168,8 @@
             </tbody>
         </table>
     </section>
+    <script src="{% static 'js/calculator.js'%}"></script>
 
-
-    <!-- Repeat the section above for different transaction categories -->
 
     <footer>
         <!-- Footer content goes here -->

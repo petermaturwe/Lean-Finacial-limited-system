@@ -1,0 +1,96 @@
+/* Basic reset and body styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Calculator button */
+.calculator {
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+/* Calculator popup styles */
+.calculator-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type=number], select {
+    width: calc(100% - 48px); /* Adjust width based on currency */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.currency-input {
+    position: relative;
+}
+
+.currency {
+    position: absolute;
+    top: 35px; /* Adjust based on your input size */
+    left: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Action button styles */
+.calculate-button, .clear-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calculate-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear-button {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .calculator-content {
+        width: 90%;
+    }
+}
