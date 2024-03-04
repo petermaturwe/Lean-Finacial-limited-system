@@ -41,7 +41,7 @@
             <div class="form-group">
                 <label for="loan-amount">Loan Amount (Ksh)</label>
                 <div class="currency-input">
-                    <span class="currency">Ksh</span>
+                    {% comment %} <span class="currency">Ksh</span> {% endcomment %}
                     <input type="number" id="loan-amount" name="loan-amount" required>
                 </div>
             </div>
@@ -84,6 +84,8 @@
             <p>Total Number of Payments: <span id="total-payments">0</span></p>
             <p>Total Interest: Ksh <span id="total-interest">0</span></p>
             <!-- Pie chart would go here -->
+
+            
         </div>
     </div>
 </div>

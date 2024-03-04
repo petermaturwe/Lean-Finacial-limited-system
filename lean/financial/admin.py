@@ -4,3 +4,4 @@ from .models import *
 
 
 admin.site.register(B2CTransaction)
+admin.site.register(STKpush)
